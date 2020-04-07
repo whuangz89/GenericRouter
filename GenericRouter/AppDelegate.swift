@@ -23,7 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [ViewController()]
-        window?.rootViewController = tabBarController
+        let rootViewController = UINavigationController(rootViewController: tabBarController)
+        
+        window?.rootViewController = rootViewController
         
         
         self.navigatorIntegrator = NavigatorIntegrator(with: self.window)

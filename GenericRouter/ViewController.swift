@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = .red
         
         let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("DEtail", for: .normal)
         btn.addTarget(self, action: #selector(openDetail), for: .touchUpInside)
         self.view.addSubview(btn)
